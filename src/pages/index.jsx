@@ -13,13 +13,7 @@ const IndexPage = () => (
   <ThemeProvider>
     <CSSReset />
     <SEO title="Home" />
-
-    <Header />
-    <Sobre />
     <Timeline />
-    <Parceiros />
-    <Inscricoes />
-    <Footer />
   </ThemeProvider>
 );
 
