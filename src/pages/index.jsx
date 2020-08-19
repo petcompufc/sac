@@ -9,11 +9,14 @@ import Parceiros from '../components/parceiros';
 import Inscricoes from '../components/inscricoes';
 import Footer from '../components/footer';
 
+
 const IndexPage = () => (
   <ThemeProvider>
     <CSSReset />
     <SEO title="Home" />
-    <Timeline />
+    <Timeline
+      atividades= {require('../components/atividades')}
+    />
   </ThemeProvider>
 );
 
