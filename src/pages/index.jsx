@@ -13,7 +13,7 @@ import Footer from '../components/footer';
 const IndexPage = () => (
   <ThemeProvider>
     <CSSReset />
-    <SEO title="Home" />
+    <SEO title="Home" bg='blue' />
     <Timeline
       atividades= {require('../components/atividades')}
     />
