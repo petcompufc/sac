@@ -92,8 +92,8 @@ export default function Footer() {
           </Box>
 
           <Stack mx = "auto">
-            <Link mx='auto' my="auto" w='90%' maxW='300px' href="http://www.ufc.br/" isExternal><Image src={ufc_logo} /></Link>
-            <Link mx='auto' my="auto" w='85%' maxW='275px' href="https://dc.ufc.br/pt/" isExternal><Image src={dc_logo} /></Link>
+            <Link mx='auto' my="20px" w='90%' maxW='300px' href="http://www.ufc.br/" isExternal><Image src={ufc_logo} /></Link>
+            <Link mx='auto' my="10px" w='85%' maxW='275px' href="https://dc.ufc.br/pt/" isExternal><Image src={dc_logo} /></Link>
           </Stack>
       </Grid>
     </Box>
