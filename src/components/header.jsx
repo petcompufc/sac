@@ -4,6 +4,7 @@ import { Box, Image, Flex, Text, Link, Drawer, DrawerOverlay, DrawerContent, use
 
 import logoSAC from '../images/Sac logo.png'
 import menuIcone from '../images/menu icone.png'
+import RGBText from './RGBText'
 
 export default () => {
   
@@ -15,13 +16,13 @@ export default () => {
       p='16px'
       color={blue}
       display='flex'
+      fontSize='20px'
       as={GatsbyLink}
+      fontWeight='bold'
       alignItems='center'
       transition='all 0.3s'
       to={`#${children.toLowerCase()}`}
-
       _hover={{
-        textDecoration: 'none',
         color: '#fff',
         bg: blue,
       }}
@@ -30,9 +31,7 @@ export default () => {
         color: '#fff',
       }}
       >
-      <Text fontSize='20px' fontWeight='bold'>
         {children}
-      </Text>
     </Link>
   )
 
@@ -49,21 +48,22 @@ export default () => {
       <Flex ml='8px'>
         <PseudoBox
           my='auto'
-          style={{ transition: '0.6s ease-in' }}
+          transition='0.6s ease-in'
           _hover={{ transform: 'rotate(360deg)' }}
         >
           <Image src={logoSAC} maxW='64px' maxH='64px'/>
         </PseudoBox>
-        <Text ml='3%' my='auto' color={blue} fontSize='32px' fontWeight='bold'>XV|SAC</Text>
+        <Text ml='3%' my='auto' color={blue} fontSize='32px' fontWeight='bold'>SAC|XV</Text>
+        <RGBText my='auto' fontSize='32px'>irtual</RGBText>
       </Flex>
 
-      <Box display={['flex', 'flex', 'none']}>
+      <Box display={{base: 'flex', lg:'none'}}>
         <Image my='auto' mr='8px' src={menuIcone} maxW='32px' maxH='32px' onClick={onOpen}/>
         <Drawer isOpen={isOpen} onClose={onClose} placement='right'>  
           <DrawerOverlay/>
           <DrawerContent w='45%'>
             <DrawerBody>
-              <NavLink>Eventos</NavLink>
+              <NavLink>Sobre</NavLink>
               <NavLink>Timeline</NavLink>
               <NavLink>Parceiros</NavLink>
               <NavLink>Inscrições</NavLink>
@@ -72,8 +72,8 @@ export default () => {
         </Drawer>
       </Box>
 
-      <Flex display={['none', 'none','flex']} mr='3%'>
-        <NavLink>Eventos</NavLink>
+      <Flex display={{base: 'none', lg:'flex'}} mr='3%'>
+        <NavLink>Sobre</NavLink>
         <NavLink>Timeline</NavLink>
         <NavLink>Parceiros</NavLink>
         <NavLink>Inscrições</NavLink>
