@@ -3,6 +3,7 @@ import React from 'react';
 
 import { 
   Box,
+  Grid,
   Image,
   Text,
   ThemeProvider,
@@ -10,102 +11,93 @@ import {
   ListItem,
   Link,
   Stack, 
-  IconButton,
+  Flex,
 } from '@chakra-ui/core';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMailBulk, faGlobe } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faGithub, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faGithub, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
-import pet_logo from '../images/logo_pet-white.png';
+import pet_logo from '../images/logo-pet.png';
 import dc_logo from '../images/logo_dc.png';
 import ufc_logo from '../images/logo_ufc.png';
 
 export default function Footer() {
+
+  const [width, setWidth] = React.useState(innerWidth);
+  React.useEffect(() => {
+    window.addEventListener('resize', () =>{
+      setWidth(innerWidth);
+    })
+  });
+
   return (
     <ThemeProvider>
-    <Box 
-      bg="#555555"
-      overflow="hidden"
-      minH="100%"
-      maxW="960"
-      padding="1.45rem 1.0875rem"
-      color="#fff"
-      w="100%"
-     
-    > 
-      <Box
-        w="80%"
-        m="0 auto"
-        boxSizing="inherit"
-        fontSize="14px"
-        fontFamily="Open Sans"
-        >
-        
       <Box 
-        w="36%" 
-        float="left"   
-        boxSizing="border-box" 
-        marginLeft="auto" >
-        <Text fontSize="18px" fontWeight="bold" textAlign="center" marginBottom="5px">Realização</Text>
-        <Image 
-          maxW="200px"
-          minW="32px"
-          float="left"   
-          w={['32px, 64px, 128px, 200px']}
-          h={['32px, 64px, 128px, 200px']}
-          src={pet_logo} 
-          alt="Logo do pet branca." />
-        <List 
-          minH="1px"
-          spacing="1"
-          fontWeight="lighter" >
-          <ListItem fontSize="18px" fontWeight="bold" >PET COMPUTAÇÃO</ListItem>
-          <ListItem>Av. Humberto Monte, s/n</ListItem>
-          <ListItem marginTop="-10px">UFC - Campus do Pici</ListItem>
-          <ListItem marginTop="-10px">Departamento de Computação</ListItem>
-          <ListItem marginTop="-10px">Bloco 910</ListItem>
-        </List>
-      </Box>
+        bg="#555555"
+        overflow="hidden"
+        maxW="960"
+        padding="1.45rem 1.0875rem"
+        color="#fff"
+        w="100%"
+      > 
+        <Grid
+          maxW="1280px"
+          w="90%"
+          mx="auto"
+          fontSize="16px"
+          fontFamily="Open Sans"
+          templateColumns={width>900? 'repeat(3, 1fr)' : width>600? 'repeat(2, 1fr' : 'repeat(1, 1fr)'}
+          justifyContent="space-evenly"
+          >
+            
+          <Box 
+            mx = "auto"
+            float="left"   
+            boxSizing="border-box"
+            >
+              <Image 
+                maxW="300px"
+                w="90%"
+                float="left"   
+                src={pet_logo} 
+                alt="Logo do pet branca." />
 
-        <List 
-        w="25%"  
-        float="left" 
-        minH="1px"
-        spacing="1"
-        fontSize="15px"
-         >
-          <Text fontSize="18px" fontWeight="bold" textAlign="center">Contato</Text>
-          <ListItem >
-            <Link href='https://github.com/petcompufc' fontSize="25px" isExternal color="white" marginLeft="50px" ><FontAwesomeIcon icon={faGithub}/></Link> Github
-          </ListItem>
-          <ListItem marginTop="-5px">
-            <Link href='https://www.facebook.com/PETCompUFC/' fontSize="25px"  isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faFacebookF}/></Link> Facebook
-          </ListItem>
-          <ListItem marginTop="-5px">
-            <Link href="https://www.instagram.com/petcompufc" fontSize="25px"  isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faInstagram} /></Link> Instagram
-          </ListItem>
-          <ListItem marginTop="-5px">
-            <Link href="https://www.youtube.com/user/petcompufc/videos" fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faYoutube} /></Link> Youtube
-          </ListItem>
-          <ListItem marginTop="-5px"> 
-            <Link href="mailto:petcomp@ufc.br" fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faMailBulk}/></Link> Email
-          </ListItem>
-          <ListItem marginTop="-5px"> 
-            <Link href="http://www.petcomp.ufc.br/" fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faGlobe}/></Link> Site
-          </ListItem>
-        </List>
+              <List 
+                float="left"
+                minH="1px"
+                spacing="1"
+                fontSize="16px"
+                m="15px 0 0 60px"
+                fontWeight="lighter" >
+                <ListItem>Av. Humberto Monte, s/n</ListItem>
+                <ListItem marginTop="-10px">UFC - Campus do Pici</ListItem>
+                <ListItem marginTop="-10px">Departamento de Computação</ListItem>
+                <ListItem marginTop="-10px">Bloco 910</ListItem>
+              </List>
+          </Box>
 
-        <Box 
-        w="33%" 
-        marginLeft="auto" >
-          <Text fontSize="18px" fontWeight="bold" >Apoio institucional</Text>
-          <Link href="http://www.ufc.br/" isExternal><Image m="14px 0px 16px 0px" maxW="70%" maxH="90px" display="inline-block" src={ufc_logo} /></Link>
-          <Link href="https://dc.ufc.br/pt/" isExternal><Image m="14px 0px 16px 0px" maxW="70%" maxH="90px" display="inline-block" src={dc_logo} /></Link>
-        </Box>
-      </Box>
+          <Box mx="auto" float="left" h="200px">
+            <Grid  mx="auto" h="80px" templateColumns="repeat(3, 1fr)" gap={1}>
+              <Link href='https://github.com/petcompufc' style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px" ><FontAwesomeIcon icon={faGithub}/></Link>
+              <Link href='https://www.facebook.com/PETCompUFC/' style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px"  isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faFacebook}/></Link>
+              <Link href="https://www.instagram.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px"  isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faInstagram} /></Link>
+              <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faYoutube} /></Link>
+              <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faMailBulk}/></Link>
+              <Link href="http://www.petcomp.ufc.br/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faGlobe}/></Link>
+            </Grid>
+            
+            <Text fontWeight="bold" fontSize="24px">Sobre o PET</Text>
+            <Text fontSize="13px" textAlign="justify">O PET Computação é um programa organizado por alguns alunos do curso de Ciência da Computação que promove eventos e projetos que possam disseminar o conhecimento sobre a área para todos.</Text>
+          </Box>
+
+          <Stack mx = "auto">
+            <Link mx='auto' my="auto" w='90%' maxW='300px' href="http://www.ufc.br/" isExternal><Image src={ufc_logo} /></Link>
+            <Link mx='auto' my="auto" w='85%' maxW='275px' href="https://dc.ufc.br/pt/" isExternal><Image src={dc_logo} /></Link>
+          </Stack>
+      </Grid>
     </Box>
-    </ThemeProvider>
-    );
-  }
+   </ThemeProvider>
+  );
+}
 
