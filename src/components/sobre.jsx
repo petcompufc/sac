@@ -5,31 +5,75 @@ import {
   PseudoBox,
   Text }
   from '@chakra-ui/core';
-import { keyframes } from '@emotion/core';
+import { Global, keyframes } from '@emotion/core';
 
-const glitch = keyframes`
+/* TODO: Criação programática dos keyframes */
+const glitch1 = keyframes`
   0% {
-    transform: translateX(0%) translateY(0%);
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
   }
   20% {
-    transform: translateX(-2%) translateY(-2%);
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
   }
   40% {
-    transform: translateX(-2%) translateY(2%);
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
   }
   60% {
-    transform: translateX(2%) translateY(-2%);
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
   }
   80% {
-    transform: translateX(2%) translateY(2%);
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
   }
   100% {
-    transform: translateX(0%) translateY(0%);
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
   }
 `;
 
+const glitch2 = keyframes`
+  0% {
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
+  }
+  20% {
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
+  }
+  40% {
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
+  }
+  60% {
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
+  }
+  80% {
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
+  }
+  100% {
+    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
+  }
+`;
+
+let e = null;
+
+const startGlitching = () => {
+  e = setInterval(() => {
+    document.documentElement.style.setProperty('--clip-path-1', `inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)`);
+    document.documentElement.style.setProperty('--clip-path-2', `inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)`);
+  }, 150);
+};
+
+const stopGlitching = () => {
+  clearInterval(e);
+  document.documentElement.style.setProperty('--clip-path-1', 'inset(100% 0% 0% 0%)');
+  document.documentElement.style.setProperty('--clip-path-2', 'inset(100% 0% 0% 0%)');
+};
+
 const Sobre = () => (
   <Flex direction="column" alignItems="center" backgroundColor="cyan.500">
+    <Global styles={{
+      ':root': {
+        '--clip-path-1': 'inset(100% 0% 0% 0%)',
+        '--clip-path-2': 'inset(100% 0% 0% 0%)',
+      }
+    }} 
+    />
     <Heading size="xl" my={5}>
       Semana Acadêmica da Computação
     </Heading>
@@ -41,31 +85,33 @@ const Sobre = () => (
       apresentar tópicos que lhe interessam.
     </Text>
     <Heading size="xl" my={5}>
-      SAC
-      <PseudoBox 
+      <PseudoBox
         display="inline"
         position="relative"
         zIndex="2"
         _before={{
+          bg: 'cyan.500',
+          clipPath: 'var(--clip-path-1)',
           position: 'absolute',
           bottom: 0,
-          right: 0,
-          content: '" Virtual?"',
-          color: 'rgba(255, 0, 255, 0.6)',
-          animation: `${glitch} 1s infinite`,
-          zIndex: -2,
+          content: '"SAC Virtual?"',
+          left: '2px',
+          textShadow: '0 -2px #f0f',
+          width: 'calc(100% + 2px)',
         }}
         _after={{
+          bg: 'cyan.500',
+          clipPath: 'var(--clip-path-2)',
           position: 'absolute',
           bottom: 0,
-          right: 0,
-          content: '" Virtual?"',
-          color: 'rgba(0, 255, 255, 0.6)',
-          animation: `${glitch} 1s .4s infinite`,
-          zIndex: -1,
+          content: '"SAC Virtual?"',
+          left: '-3px',
+          textShadow: '0 3px #0ff',
         }}
+        onMouseEnter={startGlitching}
+        onMouseLeave={stopGlitching}
       >
-        &nbsp;Virtual?
+        SAC Virtual?
       </PseudoBox>
     </Heading>
     <Text maxW="90ch" mt={2} mb={5}>
