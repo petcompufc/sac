@@ -25,14 +25,14 @@ function timeline({ atividades }) {
     return (
         <Box flexGrow={1} flexShrink={1} >
             <Heading
-                size="2x1"
+                size="lg"
                 mx='auto'
+                w='50%'
             >
                 <Text textAlign='center'>PROGRAMAÇÃO</Text>
                 <Divider
                     borderColor='#D66B00'
                     borderWidth={5}
-                    width='25%'
                     mx='auto'
                 />
             </Heading >
@@ -57,14 +57,9 @@ function timeline({ atividades }) {
                         ))}
                     </TabList>
                     <TabPanels
-                        borderTop={isBiggerOf744 ? '' : ({ style: 'solid', width: '1px' })}
-                        borderTopColor='#D66B00'
-                        borderLeft={{ style: 'solid', width: '1px' }}
-                        borderLeftColor='#D66B00'
-                        borderBottom={{ style: 'solid', width: '1px' }}
-                        borderBottomColor='#D66B00'
-                        borderRight={{ style: 'solid', width: '1px' }}
-                        borderRightColor='#D66B00'
+                        borderTop={isBiggerOf744 ? 'none' : ({ style: 'solid', width: '1px' })}
+                        border={{ style: 'solid', width: '1px' }}
+                        borderColor='#D66B00'
                         padding={5}
                     >
                         {
@@ -73,13 +68,13 @@ function timeline({ atividades }) {
                                     <Accordion allowMultiple>
                                         {atividade.dados.map((dados) => (
                                             <AccordionItem key={key_id++} >
-                                                <AccordionHeader bg='#D66B00' color='white' mt={2} _hover>
+                                                <AccordionHeader bg='#D66B00' color='white' mt={2} _hover >
                                                     <Box flex="1" textAlign="left" >
                                                         {dados.hora} | {dados.tipo} | {dados.titulo}
                                                     </Box>
                                                     <AccordionIcon />
                                                 </AccordionHeader>
-                                                <AccordionPanel pb={4} >
+                                                <AccordionPanel pb={4}>
                                                     <Text
                                                         fontSize='2x1'
                                                         color='#D66B00'
