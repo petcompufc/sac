@@ -3,52 +3,10 @@ import {
   Flex,
   Heading,
   PseudoBox,
-  Text }
+  Text,
+}
   from '@chakra-ui/core';
-import { Global, keyframes } from '@emotion/core';
-
-/* TODO: Criação programática dos keyframes */
-const glitch1 = keyframes`
-  0% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  20% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  40% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  60% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  80% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  100% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-`;
-
-const glitch2 = keyframes`
-  0% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  20% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  40% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  60% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  80% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-  100% {
-    clip-path: inset(${Math.random() * 100}% 0% ${Math.random() * 100}% 0%)
-  }
-`;
+import { Global } from '@emotion/core';
 
 let e = null;
 
@@ -71,8 +29,8 @@ const Sobre = () => (
       ':root': {
         '--clip-path-1': 'inset(100% 0% 0% 0%)',
         '--clip-path-2': 'inset(100% 0% 0% 0%)',
-      }
-    }} 
+      },
+    }}
     />
     <Heading size="xl" my={5}>
       Semana Acadêmica da Computação
