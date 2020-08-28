@@ -10,11 +10,14 @@ import Inscricoes from '../components/inscricoes';
 import Footer from '../components/footer';
 
 import logo_ceos from '../images/CEOS-logo.png'
+
 const IndexPage = () => (
   <ThemeProvider>
     <CSSReset />
-    <SEO title="Home" />
-
+    <SEO title="Home" bg='blue' />
+    <Timeline
+      atividades= {require('../components/atividades')}
+    />
     <Parceiros 
       parceiros={[
         {
@@ -27,7 +30,6 @@ const IndexPage = () => (
         }
       ]}
     />
-
   </ThemeProvider>
 );
 
