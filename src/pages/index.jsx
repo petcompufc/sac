@@ -9,17 +9,25 @@ import Parceiros from '../components/parceiros';
 import Inscricoes from '../components/inscricoes';
 import Footer from '../components/footer';
 
+import logo_ceos from '../images/CEOS-logo.png'
 const IndexPage = () => (
   <ThemeProvider>
     <CSSReset />
     <SEO title="Home" />
 
-    <Header />
-    <Sobre />
-    <Timeline />
-    <Parceiros />
-    <Inscricoes />
-    <Footer />
+    <Parceiros 
+      parceiros={[
+        {
+          logo: logo_ceos,
+          site: 'https://www.facebook.com/ceos.jr/'
+        },
+        {
+            logo: logo_ceos,
+            site: 'https://www.google.com'
+        }
+      ]}
+    />
+
   </ThemeProvider>
 );
 
