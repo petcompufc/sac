@@ -6,30 +6,31 @@ import Header from '../components/header';
 import Sobre from '../components/sobre';
 import Timeline from '../components/timeline';
 import Parceiros from '../components/parceiros';
-import Inscricoes from '../components/inscricoes';
 import Footer from '../components/footer';
 
-import logo_ceos from '../images/CEOS-logo.png'
+import logoCeos from '../images/logo_CEOS.png';
+import cronograma from '../components/atividades';
 
 const IndexPage = () => (
   <ThemeProvider>
     <CSSReset />
-    <SEO title="Home" bg='blue' />
-    <Timeline
-      atividades= {require('../components/atividades')}
-    />
-    <Parceiros 
+    <Header />
+    <Sobre />
+    <SEO title="Home" bg="blue" />
+    <Timeline cronograma={cronograma} />
+    <Parceiros
       parceiros={[
         {
-          logo: logo_ceos,
-          site: 'https://www.facebook.com/ceos.jr/'
+          logo: logoCeos,
+          site: 'https://www.facebook.com/ceos.jr/',
         },
         {
-            logo: logo_ceos,
-            site: 'https://www.google.com'
-        }
+          logo: logoCeos,
+          site: 'https://www.google.com',
+        },
       ]}
     />
+    <Footer />
   </ThemeProvider>
 );
 

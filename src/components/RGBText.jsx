@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { keyframes } from '@emotion/core';
+import { Text, PseudoBox, Flex } from '@chakra-ui/core';
 
-import { keyframes } from '@emotion/core'
-import { Text, PseudoBox, Flex } from '@chakra-ui/core'
-
-export default ({ children, my, ml, fontSize})=>{
-
+const RGBText = ({
+  children,
+  my,
+  ml,
+  fontSize,
+}) => {
   const rgbT = keyframes`
     0% {
       color: rgb(255, 0, 0);
@@ -34,25 +38,32 @@ export default ({ children, my, ml, fontSize})=>{
       color: rgb(255, 0, 0);
       text-shadow:0px 0px 3px rgb(255, 0, 0);
     }
-  `
+  `;
 
-
-  return(
+  return (
     <Flex
       ml={ml}
       my={my}
       fontSize={fontSize}
-      >
-      {children.split('').map((letter, index)=>(
+    >
+      {children.split('').map((letter, index) => (
         <PseudoBox
-          animation={`${rgbT} 8s ${index*1}s infinite`}
-          >
-          <Text
-            >
+          animation={`${rgbT} 8s ${index * 1}s infinite`}
+        >
+          <Text>
             {letter}
           </Text>
         </PseudoBox>
       ))}
     </Flex>
-  )
-}
+  );
+};
+
+RGBText.propTypes = {
+  children: PropTypes.string.isRequired,
+  my: PropTypes.node.isRequired,
+  ml: PropTypes.node.isRequired,
+  fontSize: PropTypes.node.isRequired,
+};
+
+export default RGBText;
