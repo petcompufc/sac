@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Flex,
+  Box,
   Heading,
   PseudoBox,
   Text,
