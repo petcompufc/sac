@@ -8,6 +8,8 @@ import {
   from '@chakra-ui/core';
 import { Global } from '@emotion/core';
 
+import grafo from '../images/grafo.svg';
+
 let e;
 
 const startGlitching = () => {
@@ -24,21 +26,34 @@ const stopGlitching = () => {
 };
 
 const Sobre = () => (
-  <Box
+  <PseudoBox
     backgroundColor="cyan.500"
     bgImage="repeating-linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.3) 25%,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 25%,
       transparent 25%,
       transparent 50%,
-      rgba(255, 255, 255, 0.3) 50%,
-      rgba(255, 255, 255, 0.3) 75%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.1) 75%,
       transparent 75%,
       transparent)"
     bgSize="1vh 1vh"
     p={4}
     position="relative"
+    zIndex={0}
+    _after={{
+      content: '""',
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      bgImage: `url(${grafo})`,
+      bgSize: 'cover',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      zIndex: -1,
+    }}
   >
     <Global styles={{
       ':root': {
@@ -94,7 +109,7 @@ const Sobre = () => (
       <br />
       (E não se preocupem, a VGO não foi cancelada 😉)
     </Text>
-  </Box>
+  </PseudoBox>
 );
 
 export default Sobre;
