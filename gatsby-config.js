@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'XV SAC',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    description: 'A Semana Acadêmica da Computação é um evento anual do PET que traz palestras, hands-on e mesas redondas para os alunos do curso de computação e outras pessoas interessadas na área.',
+    author: '@petcompufc',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,11 +11,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        name: 'Semana Acadêmica da Computação',
+        short_name: 'SAC',
+        start_url: '/sac/',
+        background_color: '#ffffff',
+        theme_color: '#2ca4ab',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
