@@ -4,6 +4,7 @@ module.exports = {
     description: 'A Semana Acadêmica da Computação é um evento anual do PET que traz palestras, hands-on e mesas redondas para os alunos do curso de computação e outras pessoas interessadas na área.',
     author: '@petcompufc',
   },
+  pathPrefix: '/sac/',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
