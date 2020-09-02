@@ -12,6 +12,7 @@ import Footer from '../components/footer';
 import logoCeos from '../images/logo_CEOS.png';
 import cronograma from '../components/atividades';
 import museoModerno from '../assets/MuseoModerno-VariableFont_wght.ttf';
+import Inscricoes from '../components/inscricoes';
 
 const temaSAC = {
   ...theme,
@@ -37,6 +38,7 @@ const IndexPage = () => (
     <Header />
     <Sobre id="sobre" />
     <Timeline cronograma={cronograma} id="timeline" />
+    <Inscricoes id="inscricoes" />
     <Parceiros
       id="parceiros"
       parceiros={[
