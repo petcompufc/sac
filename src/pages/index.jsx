@@ -35,9 +35,10 @@ const IndexPage = () => (
     <SEO title="Home" bg="blue" />
 
     <Header />
-    <Sobre />
-    <Timeline cronograma={cronograma} />
+    <Sobre id="sobre" />
+    <Timeline cronograma={cronograma} id="timeline" />
     <Parceiros
+      id="parceiros"
       parceiros={[
         {
           logo: logoCeos,

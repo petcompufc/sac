@@ -1,16 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Heading,
   PseudoBox,
   Text,
-}
-  from '@chakra-ui/core';
-import { Global } from '@emotion/core';
+} from '@chakra-ui/core';
 
 import GlitchingText from './glitchingText';
 import grafo from '../../images/grafo.svg';
 
-const Sobre = () => (
+const Sobre = ({ id }) => (
   <PseudoBox
     backgroundColor="cyan.500"
     bgImage="repeating-linear-gradient(
@@ -24,6 +23,7 @@ const Sobre = () => (
       transparent 75%,
       transparent)"
     bgSize="1vh 1vh"
+    id={id}
     p={4}
     position="relative"
     zIndex={0}
@@ -40,13 +40,6 @@ const Sobre = () => (
       zIndex: -1,
     }}
   >
-    <Global styles={{
-      ':root': {
-        '--clip-path-1': 'inset(100% 0% 0% 0%)',
-        '--clip-path-2': 'inset(100% 0% 0% 0%)',
-      },
-    }}
-    />
     <Heading size="xl" my={5} textAlign="center">
       Semana Acadêmica da Computação
     </Heading>
@@ -69,5 +62,13 @@ const Sobre = () => (
     </Text>
   </PseudoBox>
 );
+
+Sobre.defaultProps = {
+  id: '',
+};
+
+Sobre.propTypes = {
+  id: PropTypes.string,
+};
 
 export default Sobre;

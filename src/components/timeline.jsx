@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Heading,
   Tabs,
@@ -16,12 +17,13 @@ import {
   Flex,
 } from '@chakra-ui/core';
 
-function timeline({ cronograma }) {
+function timeline({ cronograma, id }) {
   return (
     <Box>
       <Flex
         mb={10}
         align="center"
+        id={id}
         mx="auto"
         maxW="30ch"
       >
@@ -125,5 +127,24 @@ function timeline({ cronograma }) {
     </Box>
   );
 }
+
+timeline.defaultProps = {
+  id: '',
+};
+
+timeline.propTypes = {
+  cronograma: PropTypes.arrayOf(PropTypes.shape({
+    dia: PropTypes.string,
+    atividades: PropTypes.arrayOf(PropTypes.shape({
+      tipo: PropTypes.oneOf('Palestra', 'Workshop', 'Minicurso', 'Mesa Redonda', 'VGO'),
+      titulo: PropTypes.string,
+      ministrante: PropTypes.string,
+      desc: PropTypes.string,
+      plataforma: PropTypes.string,
+      hora: PropTypes.string,
+    })),
+  })).isRequired,
+  id: PropTypes.string,
+};
 
 export default timeline;

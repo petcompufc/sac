@@ -8,12 +8,13 @@ import {
 }
   from '@chakra-ui/core';
 
-const Parceiros = ({ parceiros }) => (
+const Parceiros = ({ id, parceiros }) => (
   <Flex
     flexDirection="column"
     align="center"
     flexGrow={1}
     flexShrink={1}
+    id={id}
     paddingBottom={5}
     paddingTop={10}
   >
@@ -51,7 +52,12 @@ const Parceiros = ({ parceiros }) => (
   </Flex>
 );
 
+Parceiros.defaultProps = {
+  id: '',
+};
+
 Parceiros.propTypes = {
+  id: PropTypes.string,
   parceiros: PropTypes.arrayOf(PropTypes.shape({
     logo: PropTypes.string,
     site: PropTypes.string,
