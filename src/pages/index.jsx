@@ -28,16 +28,17 @@ const IndexPage = () => (
     <Global styles={css`
       @font-face {
         font-family: 'MuseoModerno';
-        src: {museoModerno};
+        src: ${museoModerno};
         font-weight: 100 900;
       }`}
     />
     <SEO title="Home" bg="blue" />
 
     <Header />
-    <Sobre />
-    <Timeline cronograma={cronograma} />
+    <Sobre id="sobre" />
+    <Timeline cronograma={cronograma} id="timeline" />
     <Parceiros
+      id="parceiros"
       parceiros={[
         {
           logo: logoCeos,
