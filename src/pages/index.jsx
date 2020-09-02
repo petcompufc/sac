@@ -28,7 +28,7 @@ const IndexPage = () => (
     <Global styles={css`
       @font-face {
         font-family: 'MuseoModerno';
-        src: {museoModerno};
+        src: ${museoModerno};
         font-weight: 100 900;
       }`}
     />
