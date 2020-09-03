@@ -16,9 +16,9 @@ import {
   faFacebook, faGithub, faInstagram, faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
-import petLogo from '../images/logo-pet.png';
-import dcLogo from '../images/logo_dc.png';
-import ufcLogo from '../images/logo_ufc.png';
+import logoPET from '../images/logoPET.svg';
+import logoDC from '../images/logoDC.svg';
+import logoUFC from '../images/logoUFC.svg';
 
 export default function Footer() {
   return (
@@ -49,8 +49,8 @@ export default function Footer() {
             maxW="300px"
             w="90%"
             float="left"
-            src={petLogo}
-            alt="Logo do pet branca."
+            src={logoPET}
+            alt="PET Computação universidade federal do ceará"
           />
 
           <List
@@ -83,8 +83,12 @@ export default function Footer() {
         </Box>
 
         <Stack mx="auto">
-          <Link mx="auto" my="20px" w="90%" maxW="300px" href="http://www.ufc.br/" isExternal><Image src={ufcLogo} /></Link>
-          <Link mx="auto" my="10px" w="85%" maxW="275px" href="https://dc.ufc.br/pt/" isExternal><Image src={dcLogo} /></Link>
+          <Link mx="auto" my="20px" w="90%" maxW="300px" href="http://www.ufc.br/" isExternal>
+            <Image src={logoUFC} alt="Universidade Federal do Ceará" />
+          </Link>
+          <Link mx="auto" my="10px" w="85%" maxW="275px" href="https://dc.ufc.br/pt/" isExternal>
+            <Image src={logoDC} alt="Departamento de Computação" />
+          </Link>
         </Stack>
       </Grid>
     </Box>
