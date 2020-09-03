@@ -70,12 +70,24 @@ export default function Footer() {
 
         <Box mx="auto" float="left" h="200px">
           <Grid mx="auto" h="80px" templateColumns="repeat(3, 1fr)" gap={1}>
-            <Link href="https://github.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faGithub} /></Link>
-            <Link href="https://www.facebook.com/PETCompUFC/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faFacebook} /></Link>
-            <Link href="https://www.instagram.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faInstagram} /></Link>
-            <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faYoutube} /></Link>
-            <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faMailBulk} /></Link>
-            <Link href="http://www.petcomp.ufc.br/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faGlobe} /></Link>
+            <Link href="https://github.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faGithub} alt="Veja os nossos repositórios no GitHub" />
+            </Link>
+            <Link href="https://www.facebook.com/PETCompUFC/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faFacebook} alt="Curta a nossa página no FaceBook" />
+            </Link>
+            <Link href="https://www.instagram.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faInstagram} alt="Siga-nos no instagram" />
+            </Link>
+            <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faYoutube} alt="Acesse o nosso canal no YouTube"/>
+            </Link>
+            <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faMailBulk} alt="Envie um e-mail para o PET" />
+            </Link>
+            <Link href="http://www.petcomp.ufc.br/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faGlobe} alt="Visite nosso website" />
+            </Link>
           </Grid>
 
           <Text fontWeight="bold" fontSize="24px">Sobre o PET</Text>
