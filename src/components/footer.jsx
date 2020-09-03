@@ -16,9 +16,9 @@ import {
   faFacebook, faGithub, faInstagram, faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
-import petLogo from '../images/logo-pet.png';
-import dcLogo from '../images/logo_dc.png';
-import ufcLogo from '../images/logo_ufc.png';
+import logoPET from '../images/logoPET.svg';
+import logoDC from '../images/logoDC.svg';
+import logoUFC from '../images/logoUFC.svg';
 
 export default function Footer() {
   return (
@@ -49,8 +49,8 @@ export default function Footer() {
             maxW="300px"
             w="90%"
             float="left"
-            src={petLogo}
-            alt="Logo do pet branca."
+            src={logoPET}
+            alt="PET Computação universidade federal do ceará"
           />
 
           <List
@@ -70,12 +70,24 @@ export default function Footer() {
 
         <Box mx="auto" float="left" h="200px">
           <Grid mx="auto" h="80px" templateColumns="repeat(3, 1fr)" gap={1}>
-            <Link href="https://github.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faGithub} /></Link>
-            <Link href="https://www.facebook.com/PETCompUFC/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faFacebook} /></Link>
-            <Link href="https://www.instagram.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faInstagram} /></Link>
-            <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faYoutube} /></Link>
-            <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faMailBulk} /></Link>
-            <Link href="http://www.petcomp.ufc.br/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px"><FontAwesomeIcon icon={faGlobe} /></Link>
+            <Link href="https://github.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faGithub} alt="Veja os nossos repositórios no GitHub" />
+            </Link>
+            <Link href="https://www.facebook.com/PETCompUFC/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faFacebook} alt="Curta a nossa página no FaceBook" />
+            </Link>
+            <Link href="https://www.instagram.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faInstagram} alt="Siga-nos no instagram" />
+            </Link>
+            <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faYoutube} alt="Acesse o nosso canal no YouTube"/>
+            </Link>
+            <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faMailBulk} alt="Envie um e-mail para o PET" />
+            </Link>
+            <Link href="http://www.petcomp.ufc.br/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
+              <FontAwesomeIcon icon={faGlobe} alt="Visite nosso website" />
+            </Link>
           </Grid>
 
           <Text fontWeight="bold" fontSize="24px">Sobre o PET</Text>
@@ -83,8 +95,12 @@ export default function Footer() {
         </Box>
 
         <Stack mx="auto">
-          <Link mx="auto" my="20px" w="90%" maxW="300px" href="http://www.ufc.br/" isExternal><Image src={ufcLogo} /></Link>
-          <Link mx="auto" my="10px" w="85%" maxW="275px" href="https://dc.ufc.br/pt/" isExternal><Image src={dcLogo} /></Link>
+          <Link mx="auto" my="20px" w="90%" maxW="300px" href="http://www.ufc.br/" isExternal>
+            <Image src={logoUFC} alt="Universidade Federal do Ceará" />
+          </Link>
+          <Link mx="auto" my="10px" w="85%" maxW="275px" href="https://dc.ufc.br/pt/" isExternal>
+            <Image src={logoDC} alt="Departamento de Computação" />
+          </Link>
         </Stack>
       </Grid>
     </Box>
