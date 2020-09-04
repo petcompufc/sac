@@ -10,7 +10,7 @@ import Parceiros from '../components/parceiros';
 import Footer from '../components/footer';
 
 import logoCeos from '../images/logo_CEOS.png';
-import cronograma from '../components/atividades';
+import cronograma from '../data/atividades';
 import museoModerno from '../assets/MuseoModerno-VariableFont_wght.ttf';
 import Inscricoes from '../components/inscricoes';
 
