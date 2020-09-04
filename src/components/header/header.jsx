@@ -15,7 +15,7 @@ import {
   PseudoBox,
 } from '@chakra-ui/core';
 
-import logoSAC from '../../images/SAC logo.png';
+import logoSAC from '../../images/logoSAC.svg';
 import menuIcone from '../../images/menu Icone.png';
 import RGBText from './RGBText';
 
@@ -70,14 +70,14 @@ const Header = () => {
           transition="0.6s ease-in"
           _hover={{ transform: 'rotate(360deg)' }}
         >
-          <Image src={logoSAC} maxW="64px" maxH="64px" />
+          <Image src={logoSAC} maxW={16} maxH={16} alt="" />
         </PseudoBox>
         <Text ml="3%" my="auto" color={blue} fontSize="32px" fontWeight="bold">SAC|XV</Text>
         <RGBText my="auto" fontSize="32px">irtual</RGBText>
       </Flex>
 
       <Box display={{ base: 'flex', lg: 'none' }}>
-        <Image my="auto" mr="8px" src={menuIcone} maxW="32px" maxH="32px" onClick={onOpen} />
+        <Image my="auto" mr="8px" src={menuIcone} maxW="32px" maxH="32px" onClick={onOpen} alt="Abrir Menu" />
         <Drawer isOpen={isOpen} onClose={onClose} placement="right">
           <DrawerOverlay />
           <DrawerContent w="45%">
