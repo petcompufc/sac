@@ -90,10 +90,9 @@ function timeline({ cronograma, id }) {
                         <Text
                           fontSize="2x1"
                           display={atividade.tipo === 'VGO' ? 'none' : ''}
+                          mb={3}
                         >
                           {atividade.ministrante}
-                          <br />
-                          <br />
                         </Text>
                         <Text
                           fontSize="2x1"
@@ -101,10 +100,8 @@ function timeline({ cronograma, id }) {
                         >
                           Descrição:
                         </Text>
-                        <Text fontSize="2x1">
+                        <Text fontSize="2x1" whiteSpace="pre-line" mb={3}>
                           {atividade.desc}
-                          <br />
-                          <br />
                         </Text>
                         <Text
                           fontSize="2x1"
