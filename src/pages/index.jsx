@@ -3,7 +3,7 @@ import { ThemeProvider, CSSReset, theme } from '@chakra-ui/core';
 import { Global, css } from '@emotion/core';
 
 import SEO from '../components/seo';
-import Header from '../components/header';
+import Header from '../components/header/header';
 import Sobre from '../components/sobre/sobre';
 import Timeline from '../components/timeline';
 import Parceiros from '../components/parceiros';

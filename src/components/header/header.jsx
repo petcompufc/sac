@@ -15,8 +15,8 @@ import {
   PseudoBox,
 } from '@chakra-ui/core';
 
-import logoSAC from '../images/SAC logo.png';
-import menuIcone from '../images/menu Icone.png';
+import logoSAC from '../../images/SAC logo.png';
+import menuIcone from '../../images/menu Icone.png';
 import RGBText from './RGBText';
 
 const NavLink = ({ children }) => (
@@ -57,7 +57,11 @@ const Header = () => {
       h="80px"
       as="header"
       justifyContent="space-between"
-      boxShadow="0px 2px 3px #00000060"
+      boxShadow="lg"
+      position="sticky"
+      top="0px"
+      zIndex="docked"
+      bg="white"
     >
 
       <Flex ml="8px">
