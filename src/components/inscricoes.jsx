@@ -25,8 +25,9 @@ const Inscricoes = ({ id }) => (
       </ListItem>
       <ListItem>
         <Heading size="lg" my={2}>VGO:</Heading>
-        <Link to="https://forms.gle/SMUFcW1xvw6jgGmp6" isDisabled>
-          Inscrições não abertas ainda
+        <Link href="https://forms.gle/gDRgR6dLXiRFnFxFA" isExternal>
+          Inscreva-se
+          <Icon ml={1} name="external-link" />
         </Link>
       </ListItem>
     </List>
