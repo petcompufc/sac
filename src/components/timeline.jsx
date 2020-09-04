@@ -101,7 +101,7 @@ function timeline({ cronograma, id }) {
                         >
                           Descrição:
                         </Text>
-                        <Text fontSize="2x1">
+                        <Text fontSize="2x1" whiteSpace="pre-line">
                           {atividade.desc}
                           <br />
                           <br />

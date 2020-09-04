@@ -4,35 +4,28 @@ const cronograma = [
     atividades: [
       {
         tipo: 'Palestra',
-        titulo: 'Processando, Armazenando, Integrando e Minerando Dados de ECG para Salvar Vidas',
-        ministrante: 'José Maria da Silva Monteiro Filho',
-        desc: 'O eletrocardiograma (ECG) é um exame procedimento bastante difundido e eficiente para monitorar a saúde cardíaca. Neste contexto, o grupo ARIDA tem desenvolvido uma série de pesquisas com a finalidade de auxiliar a aquisição de sinais de ECG, a extração automática de features, a integração de atividades de ECG provenientes de diferentes fontes, o pré-diagnóstico em tempo real, além da predição de eventos e anomalias.',
-        plataforma: 'Google Meet',
+        titulo: 'Data Science',
+        ministrante: 'Artur Barbosa',
+        desc: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '16:00 - 16:50',
       },
       {
-        tipo: 'Workshop',
-        titulo: 'Introdução a ReactJS',
-        ministrante: 'Samir Braga Chaves',
-        desc: 'Nesse workshop, será abordado como as novas tendências do desenvolvimento web compõem o React, e como e porquê este se tornou tão conhecido e utilizado pelas grandes empresas (Facebook, Netflix, Microsoft). Além disso, serão abordadas tecnologias como Webpack, Browserify, Node.js e Npm/Yarn.',
-        plataforma: 'Facebook/YouTube',
+        tipo: 'Palestra',
+        titulo: 'Dados de Trajetória: O que são? O que comem? O que fazer com eles?',
+        ministrante: 'Andreza Fernandes',
+        desc: `Você já reparou que ultimamente nós tivemos um grande avanço e barateamento dos custos de tecnologias de localização?! Isso acabou acarretando um grande aumento no volume de dados de trajetória! E esse tipo de dado é bastante importante, viu?!
+
+        Imagina o tanto que ele pode auxiliar no entendimento do tráfego de pessoas, de locais que elas mais visitam, encontrar padrões em seus percursos... Como sempre, estamos aqui para facilitar a vida das pessoas, dessa vez as de profissionais de Urbanismo, Geografia e diversas outras áreas!
+
+        Com toda essa importância, nessa palestra iremos: 
+        - Entender melhor esse tipo de dado;
+        - O que podemos fazer e como podemos brincar com eles; 
+        - Apresentar uma biblioteca Python open-source que contém todo o pipeline para trabalho com esse tipo de dado: o PyMove! 
+        
+        Ficou curioso?! Não perde o nosso encontro!`,
+        plataforma: 'Google Meet e YouTube',
         hora: '17:00 - 17:50',
-      },
-      {
-        tipo: 'Minicurso',
-        titulo: 'Primeiros Passos no Mundo do Machine Learning',
-        ministrante: 'Andreza Fernandes e Edvar Filho',
-        desc: 'O minicurso visa introduzir os alunos ao fantástico mundo do Machine Learning, por meio da formação de uma base sólida e necessária para melhor entendimento da área.',
-        plataforma: 'Google Meet',
-        hora: '18:00 - 18:50',
-      },
-      {
-        tipo: 'Mesa Redonda',
-        titulo: 'Qual o sentido da vida?',
-        ministrante: 'Someone',
-        desc: 'Porque? Como? Onde? Quando? Sexta, no Globo Reporter.',
-        plataforma: 'Discord',
-        hora: '19:00 - 20:00',
       },
     ],
   },
@@ -40,19 +33,19 @@ const cronograma = [
     dia: 'Quarta-feira (09/09)',
     atividades: [
       {
-        tipo: 'Mesa Redonda',
-        titulo: 'Palestra 03',
-        ministrante: '',
+        tipo: 'Palestra',
+        titulo: 'A Insegurança na Web',
+        ministrante: 'Ramon Martins',
         desc: '',
-        plataforma: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '16:00 - 16:50',
       },
       {
-        tipo: 'Workshop',
-        titulo: 'Palestra 04',
-        ministrante: '',
+        tipo: 'Palestra',
+        titulo: 'Fazer um App aplicando API de Geolocalização em React!',
+        ministrante: 'CEOS',
         desc: '',
-        plataforma: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '17:00 - 17:50',
       },
     ],
@@ -62,18 +55,18 @@ const cronograma = [
     atividades: [
       {
         tipo: 'Palestra',
-        titulo: 'Palestra 05',
-        ministrante: '',
+        titulo: 'Introdução a CTF',
+        ministrante: 'Igor Melo',
         desc: '',
-        plataforma: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '16:00 - 16:50',
       },
       {
         tipo: 'Palestra',
-        titulo: 'Palestra 06',
-        ministrante: 'Vida de programador',
+        titulo: 'Reprogramando Soft Skills para o Mercado de Tecnologia',
+        ministrante: 'Lucas Fernando',
         desc: '',
-        plataforma: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '17:00 - 17:50',
       },
     ],
@@ -83,18 +76,18 @@ const cronograma = [
     atividades: [
       {
         tipo: 'Palestra',
-        titulo: 'Palestra 08',
-        ministrante: '',
+        titulo: 'A Industria de Desenvolvimento de Jogos: Minha Experiência',
+        ministrante: 'Celito Felipetto',
         desc: '',
-        plataforma: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '16:00 - 16:50',
       },
       {
         tipo: 'Palestra',
-        titulo: 'Palestra 09',
-        ministrante: 'Italiano',
+        titulo: 'Mercado de Software: História de Carreira',
+        ministrante: 'Pietro Valente',
         desc: '',
-        plataforma: '',
+        plataforma: 'Google Meet e YouTube',
         hora: '17:00 - 17:50',
       },
       {
@@ -114,13 +107,13 @@ const cronograma = [
         tipo: 'VGO',
         titulo: 'Campeonato de LOL',
         ministrante: '',
-        desc: 'Monte sua equipe de até 5 jogadores e venha particiar:',
+        desc: 'Monte sua equipe de até 5 jogadores e venha participar',
         plataforma: 'Discord',
         hora: '16:00 - 17:50',
       },
       {
         tipo: 'VGO',
-        titulo: 'Compeonato de Valorant',
+        titulo: 'Campeonato de Valorant',
         ministrante: '',
         desc: '',
         plataforma: '',
@@ -129,7 +122,6 @@ const cronograma = [
     ],
   },
   {
-
     dia: 'Domingo (13/03)',
     atividades: [
       {
