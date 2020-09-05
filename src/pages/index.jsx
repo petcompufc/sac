@@ -33,7 +33,7 @@ const IndexPage = () => (
         font-weight: 100 900;
       }`}
     />
-    <SEO title="Home" bg="blue" />
+    <SEO title="Home" lang="pt-BR" />
 
     <Header />
     <Sobre id="sobre" />
