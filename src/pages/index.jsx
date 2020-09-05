@@ -29,7 +29,7 @@ const IndexPage = () => (
     <Global styles={css`
       @font-face {
         font-family: 'MuseoModerno';
-        src: ${museoModerno};
+        src: url('${museoModerno}') format('TrueType');
         font-weight: 100 900;
       }`}
     />
