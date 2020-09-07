@@ -38,7 +38,7 @@ const IndexPage = () => (
     <Header />
     <Sobre id="sobre" />
     <Timeline cronograma={cronograma} id="timeline" />
-    <Inscricoes id="inscricoes" />
+    <Inscricoes id="inscrições" />
     <Parceiros
       id="parceiros"
       parceiros={[
