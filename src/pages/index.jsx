@@ -43,12 +43,9 @@ const IndexPage = () => (
       id="parceiros"
       parceiros={[
         {
+          nome: 'CEOS - Empresa Junior da Computação',
           logo: logoCeos,
           site: 'https://www.facebook.com/ceos.jr/',
-        },
-        {
-          logo: logoCeos,
-          site: 'https://www.google.com',
         },
       ]}
     />

@@ -11,20 +11,16 @@ import {
 const Parceiros = ({ id, parceiros }) => (
   <Flex
     flexDirection="column"
-    align="center"
-    flexGrow={1}
-    flexShrink={1}
+    alignItems="center"
     id={id}
-    paddingBottom={5}
-    paddingTop={10}
+    py={10}
   >
     <Heading
       color="teal.500"
-      borderBottom={{ style: 'solid', width: '2px' }}
       font-weight="bold"
-      maxW={250}
+      textDecor="underline"
     >
-      PARCEIROS
+      Parceiros
     </Heading>
     <Flex
       flexDirection={{
@@ -41,6 +37,7 @@ const Parceiros = ({ id, parceiros }) => (
               mt="40px"
             >
               <Image
+                alt={parceiro.nome}
                 src={parceiro.logo}
                 size="200px"
                 objectFit="contain"
@@ -59,6 +56,7 @@ Parceiros.defaultProps = {
 Parceiros.propTypes = {
   id: PropTypes.string,
   parceiros: PropTypes.arrayOf(PropTypes.shape({
+    nome: PropTypes.string,
     logo: PropTypes.string,
     site: PropTypes.string,
   })).isRequired,
