@@ -1,108 +1,195 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+
 import {
   Box,
-  Grid,
-  Image,
-  Text,
-  List,
-  ListItem,
+  Flex,
   Link,
+  VStack,
   Stack,
+  Heading,
+  Icon,
 } from '@chakra-ui/react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMailBulk, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import {
-  faFacebook, faGithub, faInstagram, faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-
-import logoPET from '../images/logoPET.svg';
-import logoDC from '../images/logoDC.svg';
-import logoUFC from '../images/logoUFC.svg';
+  RiFacebookLine,
+  RiGithubLine,
+  RiInstagramLine,
+  RiYoutubeLine,
+} from 'react-icons/ri';
 
 export default function Footer() {
   return (
-    <Box
-      bg="#555555"
-      overflow="hidden"
-      maxW="960"
-      padding="1.45rem 1.0875rem"
-      color="#fff"
+    <Stack
+      align={['center', 'flex-start']}
+      as="footer"
+      bg="#37474f"
+      color="#ffffff"
+      direction={['column', 'row']}
+      p={10}
+      spacing={[5, 10]}
       w="100%"
+      justifyContent="center"
     >
-      <Grid
-        maxW="1280px"
-        w="90%"
-        mx="auto"
-        fontSize="16px"
-        fontFamily="Open Sans"
-        templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
-        justifyContent="space-evenly"
+      <Box
+        width="10rem"
       >
+        <StaticImage
+          alt="PETCOMP ufc"
+          src="../images/logoPET.svg"
+        />
+      </Box>
 
+      <Box
+        as="address"
+        fontStyle="normal"
+      >
+        <Heading as="h3" fontSize="xl" mb={3}>PET Computação</Heading>
+        Av. Humberto Monte, s/n
+        <br />
+        UFC - Campus do Pici
+        <br />
+        Departamento de Computação
+        <br />
+        Bloco 910
+        <br />
+        <Link href="mailto:petcomp@ufc.br">petcomp@ufc.br</Link>
+      </Box>
+
+      <VStack
+        alignItems="flex-begin"
+        spacing={3}
+      >
         <Box
-          mx="auto"
-          float="left"
-          boxSizing="border-box"
+          display={['none', 'block']}
         >
-          <Image
-            maxW="300px"
-            w="90%"
-            float="left"
-            src={logoPET}
-            alt="PET Computação universidade federal do ceará"
-          />
-
-          <List
-            float="left"
-            minH="1px"
-            spacing="1"
-            fontSize="16px"
-            m="15px 0 0 60px"
-            fontWeight="lighter"
+          <Heading
+            as="h3"
+            fontSize="xl"
+            mb={3}
           >
-            <ListItem>Av. Humberto Monte, s/n</ListItem>
-            <ListItem marginTop="-10px">UFC - Campus do Pici</ListItem>
-            <ListItem marginTop="-10px">Departamento de Computação</ListItem>
-            <ListItem marginTop="-10px">Bloco 910</ListItem>
-          </List>
+            Links
+          </Heading>
+          <Link
+            href="http://www.ufc.br/"
+            isExternal
+          >
+            Portal UFC
+          </Link>
+          <br />
+          <Link
+            href="http://portal.dc.ufc.br/"
+            isExternal
+          >
+            Departamento de Computação
+          </Link>
+          <br />
+          <Link href="https://cc.ufc.br/" isExternal color="white">Curso de Ciência da Computação</Link>
         </Box>
 
-        <Box mx="auto" float="left" h="200px">
-          <Grid mx="auto" h="80px" templateColumns="repeat(3, 1fr)" gap={1}>
-            <Link href="https://github.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faGithub} alt="Veja os nossos repositórios no GitHub" />
-            </Link>
-            <Link href="https://www.facebook.com/PETCompUFC/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faFacebook} alt="Curta a nossa página no FaceBook" />
-            </Link>
-            <Link href="https://www.instagram.com/petcompufc" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faInstagram} alt="Siga-nos no instagram" />
-            </Link>
-            <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faYoutube} alt="Acesse o nosso canal no YouTube" />
-            </Link>
-            <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faMailBulk} alt="Envie um e-mail para o PET" />
-            </Link>
-            <Link href="http://www.petcomp.ufc.br/" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faGlobe} alt="Visite nosso website" />
-            </Link>
-          </Grid>
-
-          <Text fontWeight="bold" fontSize="24px">Sobre o PET</Text>
-          <Text fontSize="13px" textAlign="justify">O PET Computação é um programa organizado por alguns alunos do curso de Ciência da Computação que promove eventos e projetos que possam disseminar o conhecimento sobre a área para todos.</Text>
-        </Box>
-
-        <Stack mx="auto">
-          <Link mx="auto" my="20px" w="90%" maxW="300px" href="http://www.ufc.br/" isExternal>
-            <Image src={logoUFC} alt="Universidade Federal do Ceará" />
+        <Flex
+          alignItems="center"
+          justify="space-evenly"
+        >
+          <Link
+            href="https://github.com/petcompufc"
+            isExternal
+            textDecoration="initial"
+          >
+            <Icon
+              as={RiGithubLine}
+              boxSize={6}
+              borderWidth={2}
+              borderColor="whiteAlpha.400"
+              borderRadius="full"
+              boxSizing="content-box"
+              padding={2}
+              transition="all .4s"
+              _hover={{ borderColor: 'whiteAlpha.800' }}
+            />
           </Link>
-          <Link mx="auto" my="10px" w="85%" maxW="275px" href="https://dc.ufc.br/pt/" isExternal>
-            <Image src={logoDC} alt="Departamento de Computação" />
+          <Link
+            aria-label="Acesse a nossa página do Facebook"
+            href="https://www.facebook.com/PETCompUFC/"
+            isExternal
+          >
+            <Icon
+              as={RiFacebookLine}
+              boxSize={6}
+              borderWidth={2}
+              borderColor="whiteAlpha.400"
+              borderRadius="full"
+              boxSizing="content-box"
+              padding={2}
+              transition="all .4s"
+              _hover={{ borderColor: 'whiteAlpha.800' }}
+            />
           </Link>
-        </Stack>
-      </Grid>
-    </Box>
+          <Link
+            aria-label="Veja o nosso instagram"
+            href="https://www.instagram.com/petcompufc"
+            isExternal
+          >
+            <Icon
+              as={RiInstagramLine}
+              boxSize={6}
+              borderWidth={2}
+              borderColor="whiteAlpha.400"
+              borderRadius="full"
+              boxSizing="content-box"
+              padding={2}
+              transition="all .4s"
+              _hover={{ borderColor: 'whiteAlpha.800' }}
+            />
+          </Link>
+          <Link
+            aria-label="Assista aos nossos vídeos no YouTube"
+            href="https://www.youtube.com/user/petcompufc/videos"
+            isExternal
+          >
+            <Icon
+              as={RiYoutubeLine}
+              boxSize={6}
+              borderWidth={2}
+              borderColor="whiteAlpha.400"
+              borderRadius="full"
+              boxSizing="content-box"
+              padding={2}
+              transition="all .4s"
+              _hover={{ borderColor: 'whiteAlpha.800' }}
+            />
+          </Link>
+        </Flex>
+      </VStack>
+
+      <VStack
+        align="center"
+        display={['none', 'flex']}
+        spacing={5}
+      >
+        <Link
+          href="http://www.ufc.br/"
+          width="15rem"
+          isExternal
+        >
+          <StaticImage
+            alt="Universidade Federal do Ceará"
+            width={300}
+            src="../images/logoUFC.svg"
+          />
+        </Link>
+        <Link
+          href="http://portal.dc.ufc.br/"
+          width="15rem"
+          isExternal
+        >
+          <StaticImage
+            alt="Departamento de Computação"
+            width={300}
+            src="../images/logoDC.svg"
+          />
+        </Link>
+      </VStack>
+    </Stack>
   );
 }

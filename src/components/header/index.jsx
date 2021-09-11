@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as GatsbyLink } from 'gatsby';
+import { FaBars } from 'react-icons/fa';
 import {
   Box,
-  Image,
+  IconButton,
   Flex,
   Heading,
   Link,
@@ -14,9 +15,8 @@ import {
   DrawerBody,
 } from '@chakra-ui/react';
 
-import logoSAC from '../../images/logoSAC.svg';
-import menuIcone from '../../images/menu Icone.png';
 import RGBText from './RGBText';
+import LogoSAC from './logoSAC';
 
 function NavLink({ children }) {
   return (
@@ -66,14 +66,10 @@ function Header() {
     >
 
       <Flex ml="8px">
-        <Image
-          alt=""
-          h="100%"
-          maxH={16}
-          maxW={16}
+        <LogoSAC
+          boxSize={16}
           my="auto"
           p={2}
-          src={logoSAC}
           transition="0.6s ease-in"
           _hover={{ transform: 'rotate(360deg)' }}
         />
@@ -84,7 +80,7 @@ function Header() {
       </Flex>
 
       <Box display={{ base: 'flex', lg: 'none' }}>
-        <Image my="auto" mr="8px" src={menuIcone} maxW="32px" maxH="32px" onClick={onOpen} alt="Abrir Menu" />
+        <IconButton my="auto" mr={2} icon={<FaBars />} maxW={10} maxH={10} onClick={onOpen} aria-label="Abrir Menu" />
         <Drawer isOpen={isOpen} onClose={onClose} placement="right">
           <DrawerOverlay />
           <DrawerContent w="45%">
