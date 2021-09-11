@@ -5,9 +5,6 @@ import { Box } from '@chakra-ui/react';
 
 function RGBText({
   children,
-  my,
-  ml,
-  fontSize,
 }) {
   const rgbT = keyframes`
     0% {

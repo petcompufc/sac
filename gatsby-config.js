@@ -7,7 +7,7 @@ module.exports = {
   pathPrefix: '/sac',
   plugins: [
     '@chakra-ui/gatsby-plugin',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-eslint',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -21,6 +21,7 @@ module.exports = {
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
