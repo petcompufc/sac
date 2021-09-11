@@ -24,6 +24,6 @@ jobs:
             ${{ runner.os }}-cache-gatsby
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          access-token: ${{ secrets.GH_PAGES_KEY }}
+          access-token: x-access-token:${{ secrets.GITHUB_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
