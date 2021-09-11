@@ -1,10 +1,9 @@
 import React from 'react';
-import { ThemeProvider, CSSReset, theme } from '@chakra-ui/core';
-import { Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/react';
 
 import SEO from '../components/seo';
-import Header from '../components/header/header';
-import Sobre from '../components/sobre/sobre';
+import Header from '../components/header';
+import Sobre from '../components/sobre';
 import Timeline from '../components/timeline';
 import Parceiros from '../components/parceiros';
 import Footer from '../components/footer';
@@ -14,18 +13,8 @@ import cronograma from '../data/atividades';
 import museoModerno from '../assets/MuseoModerno-VariableFont_wght.ttf';
 import Inscricoes from '../components/inscricoes';
 
-const temaSAC = {
-  ...theme,
-  fonts: {
-    body: 'system-ui, sans-serif',
-    heading: '"MuseoModerno", sans-serif',
-    mono: 'monospace',
-  },
-};
-
 const IndexPage = () => (
-  <ThemeProvider theme={temaSAC}>
-    <CSSReset />
+  <>
     <Global styles={css`
       @font-face {
         font-family: 'MuseoModerno';
@@ -50,7 +39,7 @@ const IndexPage = () => (
       ]}
     />
     <Footer />
-  </ThemeProvider>
+  </>
 );
 
 export default IndexPage;

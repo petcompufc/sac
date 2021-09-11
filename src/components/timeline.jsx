@@ -10,14 +10,14 @@ import {
   Text,
   Accordion,
   AccordionItem,
-  AccordionHeader,
+  AccordionButton,
   AccordionPanel,
   AccordionIcon,
   Box,
   Flex,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
-function timeline({ cronograma, id }) {
+function Timeline({ cronograma, id }) {
   return (
     <Box>
       <Flex
@@ -39,9 +39,8 @@ function timeline({ cronograma, id }) {
         <Tabs
           isFitted
           variant="enclosed"
-          variantColor="orange.500"
-          borderColor="orange.500"
-          orientation="vertical"
+          colorScheme="orange"
+          orientation={['vertical', 'horizontal']}
           mx="auto"
           maxW="90ch"
         >
@@ -73,12 +72,12 @@ function timeline({ cronograma, id }) {
                 <Accordion allowMultiple>
                   {dia.atividades.map((atividade) => (
                     <AccordionItem key={atividade.titulo}>
-                      <AccordionHeader bg="#D66B00" color="white" mt={2} _hover>
+                      <AccordionButton bg="#D66B00" color="white" mt={2} _hover>
                         <Box flex="1" textAlign="left">
                           {`${atividade.hora} | ${atividade.tipo} | ${atividade.titulo}`}
                         </Box>
                         <AccordionIcon />
-                      </AccordionHeader>
+                      </AccordionButton>
                       <AccordionPanel pb={4}>
                         <Text
                           fontSize="2x1"
@@ -125,15 +124,15 @@ function timeline({ cronograma, id }) {
   );
 }
 
-timeline.defaultProps = {
+Timeline.defaultProps = {
   id: '',
 };
 
-timeline.propTypes = {
+Timeline.propTypes = {
   cronograma: PropTypes.arrayOf(PropTypes.shape({
     dia: PropTypes.string,
     atividades: PropTypes.arrayOf(PropTypes.shape({
-      tipo: PropTypes.oneOf('Palestra', 'Workshop', 'Minicurso', 'Mesa Redonda', 'VGO'),
+      tipo: PropTypes.oneOf(['Palestra', 'Workshop', 'Minicurso', 'Mesa Redonda', 'VGO']),
       titulo: PropTypes.string,
       ministrante: PropTypes.string,
       desc: PropTypes.string,
@@ -144,4 +143,4 @@ timeline.propTypes = {
   id: PropTypes.string,
 };
 
-export default timeline;
+export default Timeline;

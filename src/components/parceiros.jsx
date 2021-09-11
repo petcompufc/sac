@@ -6,48 +6,44 @@ import {
   Image,
   Flex,
 }
-  from '@chakra-ui/core';
+  from '@chakra-ui/react';
 
-const Parceiros = ({ id, parceiros }) => (
-  <Flex
-    flexDirection="column"
-    alignItems="center"
-    id={id}
-    py={10}
-  >
-    <Heading
-      color="teal.500"
-      font-weight="bold"
-      textDecor="underline"
-    >
-      Parceiros
-    </Heading>
+function Parceiros({ id, parceiros }) {
+  return (
     <Flex
-      flexDirection={{
-        md: 'row',
-        base: 'column',
-      }}
+      flexDirection="column"
+      alignItems="center"
+      id={id}
+      py={10}
     >
-      {
-          parceiros.map((parceiro) => (
-            <Link
-              _hover={{ transform: 'scale(1.15)' }}
-              mx="20px"
-              href={parceiro.site}
-              mt="40px"
-            >
-              <Image
-                alt={parceiro.nome}
-                src={parceiro.logo}
-                size="200px"
-                objectFit="contain"
-              />
-            </Link>
-          ))
-        }
+      <Heading
+        color="teal.500"
+        fontWeight="bold"
+        textDecor="underline"
+      >
+        Parceiros
+      </Heading>
+      <Flex flexDirection={['row', 'column']}>
+        {parceiros.map((parceiro) => (
+          <Link
+            _hover={{ transform: 'scale(1.15)' }}
+            mx="20px"
+            href={parceiro.site}
+            mt="40px"
+            key={parceiro.nome}
+          >
+            <Image
+              alt={parceiro.nome}
+              src={parceiro.logo}
+              size="200px"
+              objectFit="contain"
+            />
+          </Link>
+        ))}
+      </Flex>
     </Flex>
-  </Flex>
-);
+  );
+}
 
 Parceiros.defaultProps = {
   id: '',

@@ -8,7 +8,7 @@ import {
   ListItem,
   Link,
   Stack,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMailBulk, faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -80,7 +80,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faInstagram} alt="Siga-nos no instagram" />
             </Link>
             <Link href="https://www.youtube.com/user/petcompufc/videos" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
-              <FontAwesomeIcon icon={faYoutube} alt="Acesse o nosso canal no YouTube"/>
+              <FontAwesomeIcon icon={faYoutube} alt="Acesse o nosso canal no YouTube" />
             </Link>
             <Link href="mailto:petcomp@ufc.br" style={{ transition: '0.2s' }} _hover={{ transform: 'scale(1.15)' }} fontSize="25px" isExternal color="white" marginLeft="50px">
               <FontAwesomeIcon icon={faMailBulk} alt="Envie um e-mail para o PET" />

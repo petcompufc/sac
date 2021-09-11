@@ -5,56 +5,57 @@ import {
   Box,
   Image,
   Flex,
-  Text,
+  Heading,
   Link,
   Drawer,
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
   DrawerBody,
-  PseudoBox,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import logoSAC from '../../images/logoSAC.svg';
 import menuIcone from '../../images/menu Icone.png';
 import RGBText from './RGBText';
 
-const NavLink = ({ children }) => (
-  <Link
-    p="16px"
-    color="teal.500"
-    display="flex"
-    fontSize="20px"
-    as={GatsbyLink}
-    fontWeight="bold"
-    alignItems="center"
-    transition="all 0.3s"
-    to={`#${children.toLowerCase()}`}
-    _hover={{
-      color: '#fff',
-      bg: 'teal.500',
-    }}
-    _focus={{
-      bg: 'teal.500',
-      color: '#fff',
-    }}
-  >
-    {children}
-  </Link>
-);
+function NavLink({ children }) {
+  return (
+    <Link
+      p="16px"
+      color="teal.500"
+      display="flex"
+      fontSize="20px"
+      as={GatsbyLink}
+      fontWeight="bold"
+      alignItems="center"
+      transition="all 0.3s"
+      to={`#${children.toLowerCase()}`}
+      _hover={{
+        color: '#fff',
+        bg: 'teal.500',
+      }}
+      _focus={{
+        bg: 'teal.500',
+        color: '#fff',
+      }}
+    >
+      {children}
+    </Link>
+  );
+}
 
 NavLink.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-const Header = () => {
+function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const blue = '#2ca4ab';
 
   return (
     <Flex
       w="100%"
-      h="80px"
+      h={16}
       as="header"
       justifyContent="space-between"
       boxShadow="lg"
@@ -65,15 +66,21 @@ const Header = () => {
     >
 
       <Flex ml="8px">
-        <PseudoBox
+        <Image
+          alt=""
+          h="100%"
+          maxH={16}
+          maxW={16}
           my="auto"
+          p={2}
+          src={logoSAC}
           transition="0.6s ease-in"
           _hover={{ transform: 'rotate(360deg)' }}
-        >
-          <Image src={logoSAC} maxW={16} maxH={16} alt="" />
-        </PseudoBox>
-        <Text ml="3%" my="auto" color={blue} fontSize="32px" fontWeight="bold">SAC|XV</Text>
-        <RGBText my="auto" fontSize="32px">irtual</RGBText>
+        />
+        <Heading my="auto" color={blue} fontSize="2xl" fontWeight="bold">
+          SAC|XV
+          <RGBText my="auto" ml={0} fontSize="2xl">irtual</RGBText>
+        </Heading>
       </Flex>
 
       <Box display={{ base: 'flex', lg: 'none' }}>
@@ -100,6 +107,6 @@ const Header = () => {
 
     </Flex>
   );
-};
+}
 
 export default Header;
