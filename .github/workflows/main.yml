@@ -3,12 +3,25 @@ name: Build
 on:
   push:
     branches: [ master ]
+    paths:
+        - 'src/'
+        - 'gatsby-*.js'
+        - 'package.json'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/cache@v1
+        id: gatsby-cache-incremental
+        with:
+          path: |
+            .cache
+            public
+          key: ${{ runner.os }}-cache-gatsby
+          restore-keys: |
+            ${{ runner.os }}-cache-gatsby
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.GH_PAGES_KEY }}
