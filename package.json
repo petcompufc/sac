@@ -9,6 +9,7 @@
     "@chakra-ui/react": "^1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/museomoderno": "^4.5.0",
     "framer-motion": "^4.1.17",
     "gatsby": "^3",
     "gatsby-plugin-image": "^1.13.0",
