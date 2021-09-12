@@ -31,8 +31,9 @@ function Timeline({ cronograma, id }) {
           color="#F39643"
           borderBottom={{ style: 'solid', width: '2px' }}
           fontWeight="bold"
+          textDecor="underline"
         >
-          PROGRAMAÇÃO
+          Programação
         </Heading>
       </Flex>
       <Box>

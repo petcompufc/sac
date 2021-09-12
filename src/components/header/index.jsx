@@ -74,7 +74,7 @@ function Header() {
           _hover={{ transform: 'rotate(360deg)' }}
         />
         <Heading my="auto" color={blue} fontSize="2xl" fontWeight="bold">
-          SAC|XV
+          SAC XV
           <RGBText my="auto" ml={0} fontSize="2xl">irtual</RGBText>
         </Heading>
       </Flex>
