@@ -28,7 +28,7 @@ function Timeline({ cronograma, id }) {
         maxW="30ch"
       >
         <Heading
-          color="#F39643"
+          color="#B65B0C"
           borderBottom={{ style: 'solid', width: '2px' }}
           fontWeight="bold"
           textDecor="underline"
@@ -48,15 +48,7 @@ function Timeline({ cronograma, id }) {
           <TabList>
             {cronograma.map((dia) => (
               <Tab
-                color="#F39643"
                 key={dia.dia}
-                _hover={{ bg: '#F39643', color: 'white' }}
-                _selected={{
-                  bg: '#F39643',
-                  color: 'white',
-                  border: '1px',
-                  borderBottom: 'none',
-                }}
               >
                 {dia.dia}
               </Tab>
@@ -73,7 +65,7 @@ function Timeline({ cronograma, id }) {
                 <Accordion allowMultiple>
                   {dia.atividades.map((atividade) => (
                     <AccordionItem key={atividade.titulo}>
-                      <AccordionButton bg="#D66B00" color="white" mt={2} _hover>
+                      <AccordionButton fontWeight="bold" mt={2} _expanded={{ bg: 'orange.500', color: 'white' }}>
                         <Box flex="1" textAlign="left">
                           {`${atividade.hora} | ${atividade.tipo} | ${atividade.titulo}`}
                         </Box>

@@ -41,7 +41,7 @@ function Sobre({ id }) {
         zIndex: -1,
       }}
     >
-      <Heading size="xl" my={5} textAlign="center">
+      <Heading as="h1" size="xl" my={5} textAlign="center">
         Semana Acadêmica da Computação
       </Heading>
       <Text maxW="90ch" my={3} mx="auto">

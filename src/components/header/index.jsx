@@ -50,26 +50,28 @@ NavLink.propTypes = {
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const blue = '#2ca4ab';
+  const blue = '#238186';
 
   return (
     <Flex
-      w="100%"
-      h={16}
       as="header"
-      justifyContent="space-between"
+      bg="white"
       boxShadow="lg"
+      h={16}
+      justifyContent="space-between"
       position="sticky"
       top="0px"
+      w="100%"
       zIndex="docked"
-      bg="white"
     >
 
       <Flex ml="8px">
         <LogoSAC
+          alt=""
           boxSize={16}
           my="auto"
           p={2}
+          role="presentation"
           transition="0.6s ease-in"
           _hover={{ transform: 'rotate(360deg)' }}
         />

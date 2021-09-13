@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-
 import {
   Box,
   Flex,
@@ -10,7 +9,6 @@ import {
   Heading,
   Icon,
 } from '@chakra-ui/react';
-
 import {
   RiFacebookLine,
   RiGithubLine,
@@ -92,6 +90,7 @@ export default function Footer() {
           justify="space-evenly"
         >
           <Link
+            aria-label="Acesse nossos repositórios no GitHub"
             href="https://github.com/petcompufc"
             isExternal
             textDecoration="initial"
