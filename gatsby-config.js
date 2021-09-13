@@ -12,12 +12,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Semana Acadêmica da Computação',
-        short_name: 'SAC',
+        name: 'XV Semana Acadêmica da Computação',
+        short_name: 'SAC XV',
         start_url: '/sac/',
         background_color: '#ffffff',
         theme_color: '#2ca4ab',
-        display: 'minimal-ui',
+        display: 'standalone',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
