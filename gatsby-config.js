@@ -14,7 +14,7 @@ module.exports = {
       options: {
         name: 'XV Semana Acadêmica da Computação',
         short_name: 'SAC XV',
-        start_url: '/sac/',
+        start_url: '/',
         background_color: '#ffffff',
         theme_color: '#2ca4ab',
         display: 'standalone',
