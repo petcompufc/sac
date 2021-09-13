@@ -14,38 +14,32 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
-  Flex,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 
 function Timeline({ cronograma, id }) {
   return (
-    <Box>
-      <Flex
-        mb={10}
-        align="center"
-        id={id}
-        mx="auto"
-        maxW="30ch"
+    <Box id={id}>
+      <Heading
+        color="#B65B0C"
+        borderBottom={{ style: 'solid', width: '2px' }}
+        fontWeight="bold"
+        my={3}
+        textAlign="center"
+        textDecor="underline"
       >
-        <Heading
-          color="#B65B0C"
-          borderBottom={{ style: 'solid', width: '2px' }}
-          fontWeight="bold"
-          textDecor="underline"
-        >
-          Programação
-        </Heading>
-      </Flex>
+        Programação
+      </Heading>
       <Box>
         <Tabs
-          isFitted
-          variant="enclosed"
           colorScheme="orange"
-          orientation={['vertical', 'horizontal']}
+          isFitted
           mx="auto"
           maxW="90ch"
+          orientation={useBreakpointValue({ base: 'vertical', md: 'horizontal' })}
+          flexWrap="wrap"
         >
-          <TabList>
+          <TabList w="100%">
             {cronograma.map((dia) => (
               <Tab
                 key={dia.dia}
