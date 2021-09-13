@@ -86,7 +86,7 @@ function Header() {
         <Drawer isOpen={isOpen} onClose={onClose} placement="right">
           <DrawerOverlay />
           <DrawerContent w="45%">
-            <DrawerBody>
+            <DrawerBody as="nav">
               <NavLink>Sobre</NavLink>
               <NavLink>Timeline</NavLink>
               <NavLink>Parceiros</NavLink>
@@ -96,7 +96,7 @@ function Header() {
         </Drawer>
       </Box>
 
-      <Flex display={{ base: 'none', lg: 'flex' }} mr="3%">
+      <Flex as="nav" display={{ base: 'none', lg: 'flex' }} mr="3%">
         <NavLink>Sobre</NavLink>
         <NavLink>Timeline</NavLink>
         <NavLink>Parceiros</NavLink>
