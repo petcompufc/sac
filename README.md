@@ -5,7 +5,6 @@ O site da Semana Acadêmica da Computação agrega todas as informações relati
 - O cronograma das atividades
 - Como participar
 - Nossos apoios e agradecimentos
-
 ---
 
 ## Como Trabalhar no Site
