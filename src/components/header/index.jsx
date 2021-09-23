@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as GatsbyLink } from 'gatsby';
 import { FaBars } from 'react-icons/fa';
+import { TiChevronRight } from 'react-icons/ti';
 import {
   Box,
   IconButton,
@@ -19,6 +20,7 @@ import RGBText from './RGBText';
 import LogoSAC from './logoSAC';
 
 function NavLink({ children }) {
+  const { onClose } = useDisclosure();
   return (
     <Link
       p="16px"
@@ -38,6 +40,7 @@ function NavLink({ children }) {
         bg: 'teal.500',
         color: '#fff',
       }}
+      onClick={onClose}
     >
       {children}
     </Link>
@@ -87,10 +90,11 @@ function Header() {
           <DrawerOverlay />
           <DrawerContent w="45%">
             <DrawerBody as="nav">
+              <IconButton my="auto" mr={2} icon={<TiChevronRight />} maxW={10} maxH={10} onClick={onClose} aria-label="Fechar Menu" />
               <NavLink>Sobre</NavLink>
               <NavLink>Timeline</NavLink>
               <NavLink>Parceiros</NavLink>
-              <NavLink>Inscrições</NavLink>
+              <NavLink>Inscrições </NavLink>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
