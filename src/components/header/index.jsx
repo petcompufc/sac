@@ -19,7 +19,7 @@ import {
 import RGBText from './RGBText';
 import LogoSAC from './logoSAC';
 
-function NavLink({ children }) {
+function NavLink({ children, onClick }) {
   return (
     <Link
       p="16px"
@@ -39,6 +39,7 @@ function NavLink({ children }) {
         bg: 'teal.500',
         color: 'white',
       }}
+      onClick={onClick}
     >
       {children}
     </Link>
@@ -47,6 +48,7 @@ function NavLink({ children }) {
 
 NavLink.propTypes = {
   children: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 function Header() {
@@ -89,10 +91,10 @@ function Header() {
           <DrawerContent w="45%">
             <DrawerBody as="nav">
               <IconButton my="auto" mr={2} icon={<TiChevronRight />} maxW={10} maxH={10} onClick={onClose} aria-label="Fechar Menu" />
-              <NavLink>Sobre</NavLink>
-              <NavLink>Timeline</NavLink>
-              <NavLink>Parceiros</NavLink>
-              <NavLink>Inscrições </NavLink>
+              <NavLink onClick={onClose}>Sobre</NavLink>
+              <NavLink onClick={onClose}>Timeline</NavLink>
+              <NavLink onClick={onClose}>Parceiros</NavLink>
+              <NavLink onClick={onClose}>Inscrições </NavLink>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
