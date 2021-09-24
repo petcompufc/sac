@@ -21,15 +21,21 @@ function Inscricoes({ id }) {
         Inscrições
       </Heading>
 
-      <List maxW="2xl" mx="auto">
-        <ListItem>
+      <List
+        maxW={['100vw', '40vw']}
+        d="flex"
+        justifyContent="space-between"
+        flexDirection={['column', 'row']}
+        mx="auto"
+      >
+        <ListItem textAlign="center">
           <Heading size="lg" my={2}>Palestras:</Heading>
           <Link href="https://forms.gle/SMUFcW1xvw6jgGmp6" isExternal>
             Inscreva-se
             <Icon as={FaExternalLinkSquareAlt} ml={1} role="presentation" />
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem textAlign="center" ml="2rem" mr="2rem">
           <Heading size="lg" my={2}>VGO:</Heading>
           <Link href="https://forms.gle/gDRgR6dLXiRFnFxFA" isExternal>
             Inscreva-se
