@@ -21,7 +21,7 @@ function Timeline({ cronograma, id }) {
   return (
     <Box id={id}>
       <Heading
-        color="#B65B0C"
+        color="orange.600"
         borderBottom={{ style: 'solid', width: '2px' }}
         fontWeight="bold"
         my={3}
@@ -51,7 +51,7 @@ function Timeline({ cronograma, id }) {
           <TabPanels
             borderTop={{ base: 'none', md: { style: 'solid', width: '1px' } }}
             border={{ style: 'solid', width: '1px' }}
-            borderColor="#D66B00"
+            borderColor="orange.400"
             padding={5}
           >
             { cronograma.map((dia) => (
@@ -68,7 +68,7 @@ function Timeline({ cronograma, id }) {
                       <AccordionPanel pb={4}>
                         <Text
                           fontSize="2x1"
-                          color="#D66B00"
+                          color="orange.400"
                           display={atividade.tipo === 'VGO' ? 'none' : ''}
                         >
                           {atividade.tipo === 'Mesa Redonda' ? 'Moderador: ' : 'Ministrante: '}
@@ -82,7 +82,7 @@ function Timeline({ cronograma, id }) {
                         </Text>
                         <Text
                           fontSize="2x1"
-                          color="#D66B00"
+                          color="orange.400"
                         >
                           Descrição:
                         </Text>
@@ -91,7 +91,7 @@ function Timeline({ cronograma, id }) {
                         </Text>
                         <Text
                           fontSize="2x1"
-                          color="#D66B00"
+                          color="orange.400"
                         >
                           Plataforma:
                         </Text>

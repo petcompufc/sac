@@ -9,6 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import structuredData from '../data/structuredData';
 
 function SEO({
   description, lang, meta, title,
@@ -70,7 +71,11 @@ function SEO({
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {structuredData}
+      </script>
+    </Helmet>
   );
 }
 

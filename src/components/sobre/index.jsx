@@ -12,7 +12,7 @@ import grafo from '../../images/grafo.svg';
 function Sobre({ id }) {
   return (
     <Box
-      backgroundColor="cyan.500"
+      backgroundColor="orange.500"
       bgImage="repeating-linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.1),
@@ -52,14 +52,17 @@ function Sobre({ id }) {
         apresentar tópicos que lhe interessam.
       </Text>
       <Heading size="xl" my={5} textAlign="center">
-        <GlitchingText>SAC Virtual?</GlitchingText>
+        <GlitchingText>SAC Virtual de novo?</GlitchingText>
       </Heading>
       <Text maxW="90ch" mt={2} mb={10} mx="auto">
-        Em decorrência da pandemia da COVID-19, a XV SAC será virtual, para você poder acompanhar
-        no conforto da sua casa, sem o risco da pandemia. A SAC ainda contará com diversas
-        palestras dos mais variados tópicos, com convidados de todo o Brasil.
+        Calma jovem padawan...A pandemia da COVID-19 ainda não acabou, por isso a SAC será virtual
+        novamente, assim você pode acompanhar no conforto da sua casa, sem o risco da pandemia.
+        A SAC deste ano será ainda mais dinâmica e ainda contará com diversas palestras dos mais
+        variados tópicos (pensados de acordo com os pedidos dos estudantes😉 ), com convidados
+        de todo o Brasil.
         <br />
-        (E não se preocupem, a VGO não foi cancelada 😉)
+        Vale lembrar que a VGO vem com tudo esse ano, com diversos campeonatos com os 3 jogos
+        mais votados.
       </Text>
     </Box>
   );

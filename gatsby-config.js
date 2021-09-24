@@ -1,3 +1,4 @@
+
 module.exports = {
   siteMetadata: {
     title: 'XV SAC',
@@ -15,8 +16,8 @@ module.exports = {
         name: 'XV Semana Acadêmica da Computação',
         short_name: 'SAC XV',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#2ca4ab',
+        background_color: 'white',
+        theme_color:'#2ca4ab',
         display: 'standalone',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
@@ -25,5 +26,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-preact`
   ],
 };
