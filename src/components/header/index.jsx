@@ -32,8 +32,8 @@ function NavLink({ children, onClick }) {
       transition="all 0.3s"
       to={`#${children.toLowerCase()}`}
       _hover={{
-        color: '#white',
         bg: 'teal.500',
+        color: 'white',
       }}
       _focus={{
         bg: 'teal.500',
