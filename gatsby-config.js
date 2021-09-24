@@ -17,7 +17,7 @@ module.exports = {
         short_name: 'SAC XV',
         start_url: '/',
         background_color: 'white',
-        theme_color:'cyan.500',
+        theme_color:'#2ca4ab',
         display: 'standalone',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
