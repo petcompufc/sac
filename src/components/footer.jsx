@@ -21,8 +21,8 @@ export default function Footer() {
     <Stack
       align={['center', 'flex-start']}
       as="footer"
-      bg="#37474f"
-      color="#ffffff"
+      bg="cyan.50"
+      color="white"
       direction={['column', 'row']}
       p={10}
       spacing={[5, 10]}

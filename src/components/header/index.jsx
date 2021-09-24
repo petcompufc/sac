@@ -20,7 +20,6 @@ import RGBText from './RGBText';
 import LogoSAC from './logoSAC';
 
 function NavLink({ children }) {
-  const { onClose } = useDisclosure();
   return (
     <Link
       p="16px"
@@ -33,14 +32,13 @@ function NavLink({ children }) {
       transition="all 0.3s"
       to={`#${children.toLowerCase()}`}
       _hover={{
-        color: '#fff',
+        color: '#white',
         bg: 'teal.500',
       }}
       _focus={{
         bg: 'teal.500',
-        color: '#fff',
+        color: 'white',
       }}
-      onClick={onClose}
     >
       {children}
     </Link>
@@ -53,7 +51,7 @@ NavLink.propTypes = {
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const blue = '#238186';
+  const blue = 'cyan.500';
 
   return (
     <Flex
