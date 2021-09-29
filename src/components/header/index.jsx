@@ -22,7 +22,7 @@ import LogoSAC from './logoSAC';
 function NavLink({ children, onClick }) {
   return (
     <Link
-      p="16px"
+      p={4}
       color="teal.500"
       display="flex"
       fontSize="20px"
@@ -63,12 +63,12 @@ function Header() {
       h={16}
       justifyContent="space-between"
       position="sticky"
-      top="0px"
+      top={0}
       w="100%"
       zIndex="docked"
     >
-
-      <Flex ml="8px">
+      {/* dasdadadadasda */}
+      <Flex ml={2}>
         <LogoSAC
           alt=""
           boxSize={16}
@@ -100,7 +100,7 @@ function Header() {
         </Drawer>
       </Box>
 
-      <Flex as="nav" display={{ base: 'none', lg: 'flex' }} mr="3%">
+      <Flex as="nav" display={{ base: 'none', lg: 'flex' }} mr={2}>
         <NavLink>Sobre</NavLink>
         <NavLink>Timeline</NavLink>
         <NavLink>Parceiros</NavLink>
