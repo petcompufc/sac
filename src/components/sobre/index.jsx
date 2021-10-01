@@ -8,22 +8,15 @@ import {
 
 import GlitchingText from './glitchingText';
 import grafo from '../../images/grafo.svg';
+import publico from '../../images/publico.jpg';
 
 function Sobre({ id }) {
   return (
     <Box
-      backgroundColor="orange.500"
-      bgImage="repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.1) 50%,
-      rgba(255, 255, 255, 0.1) 75%,
-      transparent 75%,
-      transparent)"
-      bgSize="1vh 1vh"
+      bgImage={`url(${publico})`}
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      bgSize="cover"
       id={id}
       p={4}
       position="relative"
@@ -34,6 +27,8 @@ function Sobre({ id }) {
         width: '100%',
         height: '100%',
         bgImage: `url(${grafo})`,
+        bgColor: 'cyan.500',
+        opacity: '82%',
         bgSize: 'cover',
         position: 'absolute',
         top: 0,
