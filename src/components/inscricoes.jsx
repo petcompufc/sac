@@ -35,7 +35,7 @@ function Inscricoes({ id }) {
             <Icon as={FaExternalLinkSquareAlt} ml={1} role="presentation" />
           </Link>
         </ListItem>
-        <ListItem textAlign="center" ml="2rem" mr="2rem">
+        <ListItem textAlign="center" ml={8} mr={8}>
           <Heading size="lg" my={2}>VGO:</Heading>
           <Link href="https://forms.gle/gDRgR6dLXiRFnFxFA" isExternal>
             Inscreva-se

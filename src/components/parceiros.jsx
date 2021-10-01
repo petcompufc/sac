@@ -27,9 +27,9 @@ function Parceiros({ id, parceiros }) {
         {parceiros.map((parceiro) => (
           <Link
             _hover={{ transform: 'scale(1.15)' }}
-            mx="20px"
+            mx={5}
             href={parceiro.site}
-            mt="40px"
+            mt={10}
             key={parceiro.nome}
           >
             <Image
