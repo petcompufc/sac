@@ -16,7 +16,6 @@ import {
   DrawerBody,
 } from '@chakra-ui/react';
 
-import RGBText from './RGBText';
 import LogoSAC from './logoSAC';
 
 function NavLink({ children, onClick }) {
@@ -67,7 +66,6 @@ function Header() {
       w="100%"
       zIndex="docked"
     >
-      {/* dasdadadadasda */}
       <Flex ml={2}>
         <LogoSAC
           alt=""
@@ -79,8 +77,19 @@ function Header() {
           _hover={{ transform: 'rotate(360deg)' }}
         />
         <Heading my="auto" color={blue} fontSize="2xl" fontWeight="bold">
-          SAC XV
-          <RGBText my="auto" ml={0} fontSize="2xl">irtual</RGBText>
+          <Flex>
+            <Box> SAC XVI </Box>
+            <Box
+              my="auto"
+              ml={0}
+              fontSize="2xl"
+              _hover={{ letterSpacing: '5px', marginLeft: '5px' }}
+              fontWeight="400"
+              transition="0.4s ease-in"
+            >
+              RTUAL
+            </Box>
+          </Flex>
         </Heading>
       </Flex>
 
