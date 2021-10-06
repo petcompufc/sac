@@ -23,7 +23,7 @@ Uma vez dentro do repositório instale as dependências com `npm install -D` (pa
 npm install -g gatsby-cli
 gatsby develop
 ```
-O [Gatsby](https://www.gatsbyjs.com/) é um gerador de sites estáticos baseado em [React](https://reactjs.org/), portanto para desenvolver é interessante ter conhecimentos nessas duas tecnologias. Adicionalmente o site faz uso do (chakra-ui)[https://chakra-ui.com/] para garantir interfaces acessíveis e fáceis de construir e garante a qualiade do código com (ESLint)[https://eslint.org/] utilizando o (AirBNB Style Guide)[https://github.com/airbnb/javascript]. 
+O [Gatsby](https://www.gatsbyjs.com/) é um gerador de sites estáticos baseado em [React](https://reactjs.org/), portanto para desenvolver é interessante ter conhecimentos nessas duas tecnologias. Adicionalmente o site faz uso do [chakra-ui](https://chakra-ui.com/) para garantir interfaces acessíveis e fáceis de construir e garante a qualiade do código com [ESLint](https://eslint.org/) utilizando o [AirBNB Style Guide](https://github.com/airbnb/javascript). 
 
 Os arquivos do site são organizados da seguinte maneira:
 
