@@ -47,7 +47,11 @@ function NavLink({ children, onClick }) {
 
 NavLink.propTypes = {
   children: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
+};
+
+NavLink.defaultProps = {
+  onClick: () => {},
 };
 
 function Header() {
