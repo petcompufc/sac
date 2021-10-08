@@ -55,9 +55,6 @@ function Sobre({ id }) {
         A SAC deste ano será ainda mais dinâmica e ainda contará com diversas palestras dos mais
         variados tópicos (pensados de acordo com os pedidos dos estudantes😉 ), com convidados
         de todo o Brasil.
-        <br />
-        Vale lembrar que a VGO vem com tudo esse ano, com diversos campeonatos com os 3 jogos
-        mais votados.
       </Text>
     </Box>
   );
