@@ -1,27 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Heading,
-  Tabs,
-  TabList,
-  TabPanel,
-  Tab,
-  TabPanels,
-  Text,
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
   Box,
+  Heading,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
   useBreakpointValue,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 function Timeline({ cronograma, id }) {
   return (
     <Box id={id}>
       <Heading
-        color="orange.600"
+        color={useColorModeValue('teal.500', 'orange.400')}
         borderBottom={{ style: 'solid', width: '2px' }}
         fontWeight="bold"
         my={3}

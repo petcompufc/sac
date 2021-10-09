@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Heading,
   Box,
+  Heading,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 import GlitchingText from './glitchingText';
@@ -27,7 +28,7 @@ function Sobre({ id }) {
         width: '100%',
         height: '100%',
         bgImage: `url(${grafo})`,
-        bgColor: 'cyan.500',
+        bgColor: useColorModeValue('cyan.500', 'cyan.800'),
         opacity: '82%',
         bgSize: 'cover',
         position: 'absolute',

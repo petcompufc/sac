@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Heading,
-  Link,
-  Image,
   Flex,
+  Heading,
+  Image,
+  Link,
+  useColorModeValue,
 }
   from '@chakra-ui/react';
 
@@ -17,7 +18,7 @@ function Parceiros({ id, parceiros }) {
       py={10}
     >
       <Heading
-        color="teal.500"
+        color={useColorModeValue('teal.500', 'orange.400')}
         fontWeight="bold"
         textDecor="underline"
       >
@@ -34,6 +35,9 @@ function Parceiros({ id, parceiros }) {
           >
             <Image
               alt={parceiro.nome}
+              bg="white"
+              borderRadius="md"
+              p={3}
               src={parceiro.logo}
               size="200px"
               objectFit="contain"

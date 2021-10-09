@@ -5,24 +5,27 @@ import { FaBars } from 'react-icons/fa';
 import { TiChevronRight } from 'react-icons/ti';
 import {
   Box,
-  IconButton,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
   Flex,
   Heading,
+  IconButton,
   Link,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
+  useColorModeValue,
   useDisclosure,
-  DrawerBody,
 } from '@chakra-ui/react';
 
 import LogoSAC from './logoSAC';
 
 function NavLink({ children, onClick }) {
+  const accentText = useColorModeValue('cyan.700', 'orange.500');
+  const bg = useColorModeValue('white', 'gray.800');
   return (
     <Link
       p={4}
-      color="teal.500"
+      color={accentText}
       display="flex"
       fontSize="20px"
       as={GatsbyLink}
@@ -31,12 +34,12 @@ function NavLink({ children, onClick }) {
       transition="all 0.3s"
       to={`#${children.toLowerCase()}`}
       _hover={{
-        bg: 'teal.500',
-        color: 'white',
+        bg: accentText,
+        color: bg,
       }}
       _focus={{
-        bg: 'teal.500',
-        color: 'white',
+        bg: accentText,
+        color: bg,
       }}
       onClick={onClick}
     >
@@ -56,13 +59,15 @@ NavLink.defaultProps = {
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const blue = 'cyan.500';
+  const accentText = useColorModeValue('cyan.700', 'orange.500');
+  const bg = useColorModeValue('white', 'gray.800');
 
   return (
     <Flex
       as="header"
-      bg="white"
+      bg={bg}
       boxShadow="lg"
+      color={accentText}
       h={16}
       justifyContent="space-between"
       position="sticky"
@@ -74,13 +79,14 @@ function Header() {
         <LogoSAC
           alt=""
           boxSize={16}
+          fill={accentText}
           my="auto"
           p={2}
           role="presentation"
           transition="0.6s ease-in"
           _hover={{ transform: 'rotate(360deg)' }}
         />
-        <Heading my="auto" color={blue} fontSize="2xl" fontWeight="bold">
+        <Heading my="auto" fontSize="2xl" fontWeight="bold">
           <Flex>
             <Box> SAC XVI </Box>
             <Box

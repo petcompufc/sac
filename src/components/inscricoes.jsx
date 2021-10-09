@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Heading, Icon, Link, List, ListItem,
+  Heading, Icon, Link, List, ListItem, useColorModeValue,
 } from '@chakra-ui/react';
 import {
   FaExternalLinkSquareAlt,
@@ -11,7 +11,7 @@ function Inscricoes({ id }) {
   return (
     <>
       <Heading
-        color="teal.500"
+        color={useColorModeValue('teal.500', 'orange.400')}
         id={id}
         my={3}
         size="xl"

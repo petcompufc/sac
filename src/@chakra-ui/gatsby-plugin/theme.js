@@ -31,6 +31,10 @@ const theme = {
     },
     white: '#ffffff',
   },
+  config: {
+    useSystemColorMode: true,
+    initialColorMode: 'light',
+  },
 };
 
 export default extendTheme(theme);
