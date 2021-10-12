@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import structuredData from '../data/structuredData';
+import evento from '../data/evento';
 
 function SEO({
   description, lang, meta, title,
@@ -73,7 +73,30 @@ function SEO({
       ].concat(meta)}
     >
       <script type="application/ld+json">
-        {structuredData}
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "${evento.nome}",
+            "startDate": "${evento.inicio}",
+            "endDate": "${evento.fim}",
+            "eventAttendanceMode": "OnlineEventAttendanceMode",
+            "eventStatus": "EventMovedOnline",
+            "url": "www.petcomp.ufc.br/sac/",
+            "inLanguage": "pt-BR",
+            "location": {
+              "@type": "VirtualLocation",
+              "url": "https://www.youtube.com/user/petcompufc"
+            },
+            "description": "${metaDescription}",
+            "organizer": {
+              "@type": "Organization",
+              "name": "PET Computação UFC",
+              "url": "www.petcomp.ufc.br"
+            },
+            "isAccessibleForFree": true
+          }
+      `}
       </script>
     </Helmet>
   );
