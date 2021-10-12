@@ -1,7 +1,6 @@
-
 module.exports = {
   siteMetadata: {
-    title: 'XV SAC',
+    title: 'XVI SAC',
     description: 'A Semana Acadêmica da Computação é um evento anual do PET que traz palestras, hands-on e mesas redondas para os alunos do curso de computação e outras pessoas interessadas na área.',
     author: '@petcompufc',
   },
@@ -17,7 +16,7 @@ module.exports = {
         short_name: 'SAC XV',
         start_url: '/',
         background_color: 'white',
-        theme_color:'#2ca4ab',
+        theme_color: '#2ca4ab',
         display: 'standalone',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
@@ -26,6 +25,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    `gatsby-plugin-preact`
+    'gatsby-plugin-preact',
   ],
 };
