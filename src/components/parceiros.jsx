@@ -32,6 +32,7 @@ function Parceiros({ id, parceiros }) {
             href={parceiro.site}
             mt={10}
             key={parceiro.nome}
+            isExternal
           >
             <Image
               alt={parceiro.nome}

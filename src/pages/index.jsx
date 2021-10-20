@@ -8,7 +8,7 @@ import Timeline from '../components/timeline';
 import Parceiros from '../components/parceiros';
 import Footer from '../components/footer';
 
-import logoCeos from '../images/logo_CEOS.png';
+import locoCelulaMultimidia from '../images/logoCelulaMultimidia.png';
 import cronograma from '../data/atividades';
 import Inscricoes from '../components/inscricoes';
 
@@ -24,9 +24,9 @@ const IndexPage = () => (
       id="parceiros"
       parceiros={[
         {
-          nome: 'CEOS - Empresa Junior da Computação',
-          logo: logoCeos,
-          site: 'https://www.facebook.com/ceos.jr/',
+          nome: 'Célula de Design e Multimídia - SMD',
+          logo: locoCelulaMultimidia,
+          site: 'https://www.instagram.com/celulamultimidia/',
         },
       ]}
     />
